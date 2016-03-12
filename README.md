@@ -5,26 +5,28 @@ It's prepared for multiple angular module.
 
 ##Prerequisites
 You need:
-    Node - [https://nodejs.org/](https://nodejs.org/)
-    Git - [https://git-scm.com/](https://git-scm.com/)
+* Node - [https://nodejs.org/](https://nodejs.org/)
+* Git - [https://git-scm.com/](https://git-scm.com/)
 
 ##Geting started
 
 ###Clone
-        git clone --depth=1 https://github.com/elnino3800/angular-quickstart.git <your-project-name>
-        cd <your-project-name>
+```git clone --depth=1 https://github.com/elnino3800/angular-quickstart.git <your-project-name>
+cd <your-project-name>```
         
 ###Install
-        npm install
+```npm install```
 
 ###Run
-        gulp - (run default gulp task) - run watching sass files, start browser-sync server and open browser with running app
+```gulp```
+(run default gulp task) - run watching sass files, start browser-sync server and open browser with running app
 
 ###Build
-        gulp build - create dist directory with minification, uglification, copyfication, ... :)
+```gulp build```
+create dist directory with minification, uglification, copyfication, ... :)
     
 ##Gulp
-    Task runner for develop, deploy, test, etc. [http://gulpjs.com/](http://gulpjs.com/)
+Task runner for develop, deploy, test, etc. [http://gulpjs.com/](http://gulpjs.com/)
     
 ###Gulp tasks:
 * sass - compile scss(sass) file into css
@@ -41,5 +43,3 @@ You need:
     * images - copy images from src to dist directory
     * buildIndex - process index.html from src, merge css and js to one file. Do uglification and minification. Ad revision number to js and css.
     * cleanBuild - clean after build
-    
-    
