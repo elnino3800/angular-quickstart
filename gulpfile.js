@@ -127,7 +127,7 @@ gulp.task('buildIndex', function () {
 });
 
 gulp.task('cleanBuild', function (cb) {
-    return del([ dist.templates ], cb);
+    return del([ dist.app ], cb);
 });
 
 gulp.task('build', function () {
