@@ -11,18 +11,26 @@ You need:
 ##Geting started
 
 ###Clone
-```git clone --depth=1 https://github.com/elnino3800/angular-quickstart.git <your-project-name>
-cd <your-project-name>```
+```
+git clone --depth=1 https://github.com/elnino3800/angular-quickstart.git <your-project-name>
+cd <your-project-name>
+```
         
 ###Install
-```npm install```
+```
+npm install
+```
 
 ###Run
-```gulp```
+```
+gulp
+```
 (run default gulp task) - run watching sass files, start browser-sync server and open browser with running app
 
 ###Build
-```gulp build```
+```
+gulp build
+```
 create dist directory with minification, uglification, copyfication, ... :)
     
 ##Gulp
