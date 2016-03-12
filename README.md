@@ -27,19 +27,19 @@ It's prepared for multiple angular module.
     Task runner for develop, deploy, test, etc. [http://gulpjs.com/](http://gulpjs.com/)
     
 ###Gulp tasks:
-`*sass - compile scss(sass) file into css
-`*watch - watching folder with scss files changes and run sass task on change
-`*browserSync - run server and open browser - serving files from src directory
-`*browserSyncDist - run server and open browser - serving files from dist directory
-`*dist - build distribution and run server (browserSyncDist)
+* sass - compile scss(sass) file into css
+* watch - watching folder with scss files changes and run sass task on change
+* browserSync - run server and open browser - serving files from src directory
+* browserSyncDist - run server and open browser - serving files from dist directory
+* dist - build distribution and run server (browserSyncDist)
 
-`*build - build distribution
-`**clean - clean dist directory
-`**html - copy html from src to dist directory
-`**templates - copy html templates from src/app directory and create angular module with template cache
-`**fonts - copy fonts from src to dist directory
-`**images - copy images from src to dist directory
-`**buildIndex - process index.html from src, merge css and js to one file. Do uglification and minification. Ad revision number to js and css.
-`**cleanBuild - clean after build
+* build - build distribution
+** clean - clean dist directory
+** html - copy html from src to dist directory
+** templates - copy html templates from src/app directory and create angular module with template cache
+** fonts - copy fonts from src to dist directory
+** images - copy images from src to dist directory
+** buildIndex - process index.html from src, merge css and js to one file. Do uglification and minification. Ad revision number to js and css.
+** cleanBuild - clean after build
     
     
