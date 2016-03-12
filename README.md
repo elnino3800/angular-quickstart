@@ -4,9 +4,9 @@ Quickstart app with angular 1, bootstrap-sass and routing with ui-route.
 It's prepared for multiple angular module.
 
 ##Prerequisites
-    You need:
-     Node - [https://nodejs.org/](https://nodejs.org/)
-     Git - [https://git-scm.com/](https://git-scm.com/)
+You need:
+    Node - [https://nodejs.org/](https://nodejs.org/)
+    Git - [https://git-scm.com/](https://git-scm.com/)
 
 ##Geting started
 
