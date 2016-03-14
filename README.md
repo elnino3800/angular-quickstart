@@ -41,7 +41,7 @@ Task runner for develop, deploy, test, etc. [http://gulpjs.com/](http://gulpjs.c
 * watch - watching folder with scss files changes and run sass task on change
 * browserSync - run server and open browser - serving files from src directory
 * browserSyncDist - run server and open browser - serving files from dist directory
-* dist - build distribution and run server (browserSyncDist)
+* dist - shortcut for browserSyncDist task
 
 * build - build distribution
     * clean - clean dist directory

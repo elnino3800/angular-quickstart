@@ -12,7 +12,7 @@ var gulp = require('gulp'),
     rev = require('gulp-rev'),
     revReplace = require('gulp-rev-replace'),
     gulpif = require('gulp-if'),
-    minifyCss = require('gulp-minify-css');
+    cleanCss = require('gulp-clean-css');
 
 var options = {};
 options.sass = {
@@ -65,9 +65,12 @@ gulp.task('browserSync', function () {
         server: {
             baseDir: 'src',
             routes: {
-                "/node_modules": "node_modules"
+                "/node_modules": "node_modules",
+                "/fonts/bootstrap": "node_modules/bootstrap-sass/assets/fonts/bootstrap"
             }
-        }
+        },
+        browser: [],
+        reloadOnRestart: true
     })
 });
 
@@ -78,7 +81,9 @@ gulp.task('browserSyncDist', function () {
             routes: {
                 "/node_modules": "node_modules"
             }
-        }
+        },
+        browser: [],
+        reloadOnRestart: true
     })
 });
 
@@ -104,7 +109,7 @@ gulp.task('templates', function () {
 });
 
 gulp.task('fonts', function () {
-    return gulp.src(src.fonts + '/**')
+    return gulp.src([src.fonts + '/**', 'node_modules/bootstrap-sass/assets/fonts/**'])
         .pipe(gulp.dest(dist.fonts));
 });
 
@@ -119,10 +124,10 @@ gulp.task('buildIndex', function () {
         .pipe(useref({searchPath:['dist','src']}))
         .pipe(gulpif('*.js', ngAnnotate()))
         .pipe(gulpif('*.js', uglify()))
-        .pipe(gulpif('*.js', rev()))
-        .pipe(gulpif('*.css', minifyCss()))
-        .pipe(gulpif('*.css', rev()))
-        .pipe(revReplace())
+        //.pipe(gulpif('*.js', rev()))
+        .pipe(gulpif('*.css', cleanCss()))
+        //.pipe(gulpif('*.css', rev()))
+        //.pipe(revReplace())
         .pipe(gulp.dest('' + dist));
 });
 
@@ -133,13 +138,12 @@ gulp.task('cleanBuild', function (cb) {
 gulp.task('build', function () {
     return runSequence(
         'clean',
-        'sass',
-        ['html', 'templates', 'fonts', 'images'],
+        'sass', 'html', 'templates', 'fonts', 'images',
         'buildIndex',
         'cleanBuild'
     );
 });
 
-gulp.task('dist', ['build', 'browserSyncDist']);
+gulp.task('dist', ['browserSyncDist']);
 
 gulp.task('default', ['watch', 'browserSync']);
