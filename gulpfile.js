@@ -124,10 +124,10 @@ gulp.task('buildIndex', function () {
         .pipe(useref({searchPath:['dist','src']}))
         .pipe(gulpif('*.js', ngAnnotate()))
         .pipe(gulpif('*.js', uglify()))
-        //.pipe(gulpif('*.js', rev()))
+        .pipe(gulpif('*.js', rev()))
         .pipe(gulpif('*.css', cleanCss()))
-        //.pipe(gulpif('*.css', rev()))
-        //.pipe(revReplace())
+        .pipe(gulpif('*.css', rev()))
+        .pipe(revReplace())
         .pipe(gulp.dest('' + dist));
 });
 
