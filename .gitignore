@@ -1,4 +1,5 @@
 /.idea
 /dist
 /node_modules
+/coverage
 # Created by .ignore support plugin (hsz.mobi)
